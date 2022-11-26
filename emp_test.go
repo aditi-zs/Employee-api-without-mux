@@ -62,9 +62,7 @@ import (
 //			assert.Equal(t, tc.expRes, actRes)
 //		}
 //	}
-func TestGetByid(t *testing.T) {
 
-}
 func TestEmployee(t *testing.T) {
 	tests := []struct {
 		description string
