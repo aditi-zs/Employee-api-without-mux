@@ -35,11 +35,13 @@ func Employee(w http.ResponseWriter, r *http.Request) {
 					if err != nil {
 						log.Println(err)
 					}
-				} else {
-					w.WriteHeader(http.StatusBadRequest)
-					fmt.Fprintf(w, "ID doesn't exist")
+					return
 				}
 			}
+
+			w.WriteHeader(http.StatusBadRequest)
+			fmt.Fprintf(w, "ID doesn't exist")
+
 			return
 		}
 		//get all records
